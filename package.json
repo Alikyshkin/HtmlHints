@@ -1,0 +1,55 @@
+{
+  "name": "htmlhints",
+  "displayName": "htmlhints",
+  "description": "This is an extension that helps to write html code easily",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:htmlhints.htmlBase"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "htmlhints.htmlBase",
+        "title": "htmlBase"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "htmlhints.htmlBase",
+          "group": "navigation@-htmlBase",
+					"when": "resourceLangId == html"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "htmlhints.htmlBase",
+					"when": "resourceLangId == html"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.73.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
