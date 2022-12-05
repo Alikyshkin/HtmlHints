@@ -1,5 +1,7 @@
 # HtmlHints README
 
+Кузнецова Алика Анатольевна M33081
+
 This extension allows user to set the default environment of coding via HTML, CSS and JS code. It inserts a default HTML code in any .html file of your choice. It also adds the links to the .js and .css files, creates them and connects them to the .html one.
 
 It can be used whether from the context menu or using the Ctr + Shift + P "htmlBase".
