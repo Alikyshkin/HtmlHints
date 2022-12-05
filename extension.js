@@ -42,12 +42,12 @@ function activate(context) {
 		const wsPath = vscode.workspace.workspaceFolders[0].uri.fsPath; // gets the path of the first workspace folder
 		const filePath = vscode.Uri.file(wsPath + '/assets/css/style.css');
 		vscode.window.showInformationMessage(filePath.toString());
-		wsedit.createFile(filePath, { ignoreIfExists: true });
+		wsedit.createFile(filePath, { ignoreIfExists: false });
 		vscode.workspace.applyEdit(wsedit);
 
 		const filePath2 = vscode.Uri.file(wsPath + '/assets/js/script.js');
 		vscode.window.showInformationMessage(filePath2.toString());
-		wsedit.createFile(filePath2, { ignoreIfExists: true });
+		wsedit.createFile(filePath2, { ignoreIfExists: false });
 		vscode.workspace.applyEdit(wsedit);
 
 		vscode.window.showInformationMessage('Created a new file: /assets/css/style.css');
